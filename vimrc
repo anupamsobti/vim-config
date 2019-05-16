@@ -17,8 +17,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'lervag/vimtex'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
