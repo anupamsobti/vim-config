@@ -19,6 +19,22 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'lervag/vimtex'
+Plugin 'ervandew/supertab'
+
+" Ultisnips setup
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 
 " The following are examples of different formats supported.
@@ -79,7 +95,7 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set tags=./tags;/
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 
 " Set leader key to space
 :let mapleader = " "
@@ -98,4 +114,4 @@ EOF
 syntax enable
 set background=dark
 colorscheme solarized
-set guifont="Fira Mono Regular 12"
+set guifont=Fira\ Mono\ 12
